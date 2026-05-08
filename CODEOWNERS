@@ -1,0 +1,17 @@
+# Auth surface — must be reviewed by platform team
+/src/middlewares/auth.js          @alice-platform
+/src/services/token.service.js    @alice-platform
+/src/services/auth.service.js     @alice-platform
+/src/config/config.js             @alice-platform
+/src/routes/v1/auth.route.js      @alice-platform
+
+# Application services
+/src/services/                    @dan-coretech
+/src/controllers/                 @dan-coretech
+
+# Docs and runbooks
+/docs/runbooks/                   @alice-platform
+/docs/adr/                        @alice-platform
+
+# Catch-all
+*                                 @alice-platform
