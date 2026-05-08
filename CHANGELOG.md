@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/Henning-1/node-express-boilerplate/compare/v1.7.0...v1.8.0) (2026-05-08)
+
+### Features
+
+- add runbooks for auth 401-storms, postgres failover, and techdocs build
+- add ADRs documenting JWT strategy and refresh-token rotation
+- add CODEOWNERS file mapping auth files to `@alice-platform`
+
+### Chores
+
+- tighten JWT access token expiry per security review (reduced `JWT_ACCESS_EXPIRATION_MINUTES`)
+
 ## [1.7.0](https://github.com/hagopj13/node-express-boilerplate/compare/v1.6.0...v1.7.0) (2021-03-30)
 
 ### Features
