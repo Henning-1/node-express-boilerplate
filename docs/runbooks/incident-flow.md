@@ -134,7 +134,7 @@ STEP 3 — Open the incident Slack channel with the synthesis
 Call create_slack_channel to stand up a dedicated coordination
 channel for this incident. Pass:
 
-  name:    incident-YYYY-MM-DD-<system>-<symptom-shorthand>
+  name:    incident-YYYY-MM-DD-<system>-<symptom-shorthand>-<UTC-timestamp>
            (e.g. "incident-2026-05-09-auth-401s") — use the
            date the incident *started*, lowercase, hyphens only.
   topic:   one-line present-tense incident description
