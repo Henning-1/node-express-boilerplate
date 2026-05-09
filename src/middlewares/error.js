@@ -18,7 +18,8 @@ const errorConverter = (err, req, res, next) => {
 // eslint-disable-next-line no-unused-vars
 const errorHandler = (err, req, res, next) => {
   let { statusCode, message } = err;
-  if (config.env === 'production' && !err.isOperational) {
+  // standardize the error envelope in production so internal details never leak
+  if (config.env === 'production') {
     statusCode = httpStatus.INTERNAL_SERVER_ERROR;
     message = httpStatus[httpStatus.INTERNAL_SERVER_ERROR];
   }
