@@ -21,16 +21,8 @@ if (config.env !== 'test') {
   app.use(morgan.errorHandler);
 }
 
-// set security HTTP headers
+// security middleware
 app.use(helmet());
-
-// parse json request body
-app.use(express.json());
-
-// parse urlencoded request body
-app.use(express.urlencoded({ extended: true }));
-
-// sanitize request data
 app.use(xss());
 app.use(mongoSanitize());
 
@@ -52,6 +44,10 @@ if (config.env === 'production') {
 
 // v1 api routes
 app.use('/v1', routes);
+
+// request body parsers (json + urlencoded)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
